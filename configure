@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+echo "Configuration started"
+
+echo "Adding VIM"
+rm --force ~/.vimrc
+cp .vimrc ~/.vimrc
+
+echo "Configuration done"
