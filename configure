@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 
-echo "Configuration started"
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd ) 
 
-echo "Adding VIM"
+echo "Add VIM configuration"
 rm --force ~/.vimrc
-cp .vimrc ~/.vimrc
+ln -s ${SCRIPT_DIR}/.vimrc ~/.vimrc
+
+echo "Add ZSH configuration"
+rm --force ~/.zshrc
+ln -s ${SCRIPT_DIR}/.zshrc ~/.zshrc
 
 echo "Configuration done"
